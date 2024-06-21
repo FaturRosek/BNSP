@@ -14,6 +14,16 @@
     <div class="container-xxl" style="max-width: 1560px;">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                @session('status')
+                    <div class="alert alert-primary" role="alert">
+                        {{ $value }}
+                    </div>
+                @endsession
+                @session('status2')
+                    <div class="alert alert-danger" role="alert">
+                        {{ $value }}
+                    </div>
+                @endsession
                 <div class="d-flex justify-content-between mt-3">
                     <div class="search-box position-relative">
                         <i class="fal fa-search fs-3 position-absolute top-50 translate-middle-y left-10"></i>

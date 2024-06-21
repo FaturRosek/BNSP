@@ -24,7 +24,8 @@ Route::get('/', [LandingController::class, 'index']);
 Route::resource('/login', LoginController::class);
 Route::post('/proseslogin', [LoginController::class, 'autentikasi']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::resource('/register', RegisterController::class);
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'buatakun'])->name('register');
 Route::resource('/dashboard', DashboardController::class);
 
 

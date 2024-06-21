@@ -39,13 +39,13 @@ class JabatanController extends Controller
             'jabatan' => $request->jabatan,
         ]);
 
-        return redirect()->route('jabatan.index')->with('succes', 'Data Berhasil Ditambahkan');
+        return redirect()->route('jabatan.index')->with('status', 'Data Berhasil Ditambahkan');
     }
 
     public function destroy(string $id)
     {
         $jabatan = Jabatan::find($id);
         $jabatan->delete();
-        return redirect()->route('jabatan.index')->with('status', 'Data Berhasil di Hapus');
+        return redirect()->route('jabatan.index')->with('status2', 'Data Berhasil di Hapus');
     }
 }

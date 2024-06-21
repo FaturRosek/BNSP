@@ -79,7 +79,7 @@ class PegawaiController extends Controller
 
         $pegawai->delete();
 
-        return redirect()->route('datapegawai.index')->with('status', 'Data Berhasil di Hapus');
+        return redirect()->route('datapegawai.index')->with('status2', 'Data Berhasil di Hapus');
     }
 
     public function edit($id)

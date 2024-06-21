@@ -38,13 +38,13 @@ class DivisiController extends Controller
             'divisi' => $request->divisi,
         ]);
 
-        return redirect()->route('divisi.index')->with('succes', 'Data Berhasil Ditambahkan');
+        return redirect()->route('divisi.index')->with('status', 'Data Berhasil Ditambahkan');
     }
 
     public function destroy(string $id)
     {
         $divisi = Divisi::find($id);
         $divisi->delete();
-        return redirect()->route('divisi.index')->with('status', 'Data Berhasil di Hapus');
+        return redirect()->route('divisi.index')->with('status2', 'Data Berhasil di Hapus');
     }
 }

@@ -44,9 +44,6 @@
 
             <h1 class="logo me-auto"><a href="{{ url('/') }}"><img src="landing/img/logo3.png"
                         style="width: 70px; height: 60px;"></a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto"><img src="landing/img/logo.png" alt="" class="img-fluid"></a>-->
-
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
@@ -74,10 +71,6 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM's Tailor</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                                mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-                                vel. Minus et tempore modi architecto.</p>
                             <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                 More</a>
                         </div>
@@ -89,10 +82,6 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM's Tailor</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                                mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-                                vel. Minus et tempore modi architecto.</p>
                             <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                 More</a>
                         </div>
@@ -104,10 +93,6 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM's Tailor</span></h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                                mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-                                vel. Minus et tempore modi architecto.</p>
                             <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                 More</a>
                         </div>
@@ -174,7 +159,7 @@
                             $jabatanPegawai = $jabatan->firstWhere('id', $p->jabatan_id);
                             $divisi = $divisi->firstWhere('id', $p->divisi_id);
                         @endphp
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 mt-4">
                             <div class="member d-flex align-items-start">
                                 <div class="pic">
                                     <img src="{{ asset($p->foto) }}" class="img-fluid">
@@ -194,7 +179,6 @@
                         </div>
                     @endforeach
                 </div>
-
             </div>
         </section><!-- End Team Section -->
 
