@@ -1,7 +1,7 @@
 <aside id="sidebar" class="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/dashboard') }}">
+            <a class="nav-link collapsed" href="{{ url('/dashboard') }}">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -24,7 +24,7 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/datapegawai') }}">
+            <a class="nav-link collapsed" href="{{ url('/datapegawai') }}">
                 <i class="bi bi-people"></i>
                 <span>Data Pegawai</span>
             </a>
