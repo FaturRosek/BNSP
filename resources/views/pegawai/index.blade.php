@@ -27,8 +27,8 @@
                 <div class="d-flex justify-content-between mt-3">
                     <div class="search-box position-relative">
                         <i class="bi bi-search position-absolute top-50 translate-middle-y" style="left: 10px;"></i>
-                        <input type="text" table-id="pegawai-table" id="searchBox" data-action="search"
-                            class="form-control form-control-solid ps-5" placeholder="Search Pegawai" />
+                        <input type="text" id="searchBox" class="form-control form-control-solid ps-5"
+                            placeholder="Search Pegawai" />
                     </div>
                     <a href="{{ route('datapegawai.create') }}" class="btn btn-primary">+ Tambah Data</a>
                 </div>
@@ -91,24 +91,22 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchBox = document.getElementById('searchBox');
-            const table = document.getElementById('pegawai-table').getElementsByTagName('tbody')[0];
-            searchBox.addEventListener('input', function() {
-                const searchTerm = searchBox.value.toLowerCase();
-                const rows = table.getElementsByTagName('tr');
-                for (let i = 0; i < rows.length; i++) {
-                    const cells = rows[i].getElementsByTagName('td');
-                    let rowContainsSearchTerm = false;
-                    for (let j = 0; j < cells.length; j++) {
-                        if (cells[j].textContent.toLowerCase().includes(searchTerm)) {
-                            rowContainsSearchTerm = true;
-                            break;
+        $(document).ready(function() {
+            $('#searchBox').on('keyup', function() {
+                const searchTerm = $(this).val().toLowerCase().trim();
+
+                $('#pegawai-table tbody tr').each(function() {
+                    let found = false;
+                    $(this).find('td').each(function() {
+                        if ($(this).text().toLowerCase().indexOf(searchTerm) !== -1) {
+                            found = true;
+                            return false;
                         }
-                    }
-                    rows[i].style.display = rowContainsSearchTerm ? '' : 'none';
-                }
+                    });
+                    $(this).toggle(found);
+                });
             });
         });
     </script>

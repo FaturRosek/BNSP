@@ -25,14 +25,11 @@
                     </div>
                 @endsession
                 <div class="d-flex justify-content-between mt-3">
-                    <div class="search-box position-relative">
-                        <i class="fal fa-search fs-3 position-absolute top-50 translate-middle-y left-10"></i>
-                        <input type="text" data-table-id="goodsrecording-table" id="searchBox" data-action="search"
-                            class="form-control form-control-solid ps-5" placeholder="Search Pegawai" />
+                    <div class="search-box position-relative ms-auto">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">
+                            + Tambah Data
+                        </button>
                     </div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">
-                        + Tambah Data
-                    </button>
                 </div>
             </div>
         </div>
