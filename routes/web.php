@@ -26,9 +26,10 @@ Route::post('/proseslogin', [LoginController::class, 'autentikasi']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'buatakun'])->name('register');
-Route::resource('/dashboard', DashboardController::class);
 
-
-Route::resource('/jabatan', JabatanController::class);
-Route::resource('/divisi', DivisiController::class);
-Route::resource('/datapegawai', PegawaiController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('/dashboard', DashboardController::class);
+    Route::resource('/jabatan', JabatanController::class);
+    Route::resource('/divisi', DivisiController::class);
+    Route::resource('/datapegawai', PegawaiController::class);
+});

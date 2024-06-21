@@ -62,7 +62,8 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM Tailor</span></h2>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
+                            <a href="{{ url('/login') }}"
+                                class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                 More</a>
                         </div>
                     </div>
@@ -71,7 +72,8 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM Tailor</span></h2>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
+                            <a href="{{ url('/login') }}"
+                                class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                 More</a>
                         </div>
                     </div>
@@ -80,7 +82,8 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM Tailor</span></h2>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
+                            <a href="{{ url('/login') }}"
+                                class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                 More</a>
                         </div>
                     </div>
@@ -101,27 +104,26 @@
                 <div class="row gy-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="stats-item text-center">
-                            <i class="bi bi-person"></i>
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="232"
-                                data-purecounter-duration="0">232</span>
-                            <p>Klien</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="stats-item text-center">
-                            <i class="bi bi-journal-richtext"></i>
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="521"
-                                data-purecounter-duration="0">521</span>
-                            <p>Projek</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="stats-item text-center">
                             <i class="bi bi-people"></i>
                             <span class="purecounter" data-purecounter-start="0" data-purecounter-end="15"
                                 data-purecounter-duration="0">{{ $totalpegawai }}</span>
-                            <p>Pegawai</p>
+                            <p>Total Pegawai</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="stats-item text-center">
+                            <i class="bi bi-person"></i>
+                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="232"
+                                data-purecounter-duration="0">{{ $totalpegawaiL }}</span>
+                            <p>Pegawai Laki-Laki</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="stats-item text-center">
+                            <i class="bi bi-person"></i>
+                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="521"
+                                data-purecounter-duration="0">{{ $totalpegawaiP }}</span>
+                            <p>Pegawai Perempuan</p>
                         </div>
                     </div>
                 </div>

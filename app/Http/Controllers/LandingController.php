@@ -15,6 +15,8 @@ class LandingController extends Controller
         $jabatan = Jabatan::all();
         $divisi = Divisi::all();
         $totalpegawai = Pegawai::count();
-        return view('landing', compact('pegawai', 'jabatan', 'divisi', 'totalpegawai'));
+        $totalpegawaiL = Pegawai::where('jenis_kelamin', 'Laki-Laki')->count();
+        $totalpegawaiP = Pegawai::where('jenis_kelamin', 'Perempuan')->count();
+        return view('landing', compact('pegawai', 'jabatan', 'divisi', 'totalpegawai', 'totalpegawaiL', 'totalpegawaiP'));
     }
 }

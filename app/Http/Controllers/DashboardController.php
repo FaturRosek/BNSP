@@ -13,7 +13,9 @@ class DashboardController extends Controller
     public function index()
     {
         $totalpegawai = Pegawai::count();
-        return view('dashboard.index', compact('totalpegawai'));
+        $totalpegawaiL = Pegawai::where('jenis_kelamin', 'Laki-Laki')->count();
+        $totalpegawaiP = Pegawai::where('jenis_kelamin', 'Perempuan')->count();
+        return view('dashboard.index', compact('totalpegawai', 'totalpegawaiL', 'totalpegawaiP'));
     }
 
     /**

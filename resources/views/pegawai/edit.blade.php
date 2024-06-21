@@ -21,8 +21,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Jenis Kelamin</label>
-                        <input type="text" name="jenis_kelamin" id="jenis_kelamin" class="form-control"
-                            value="{{ $pegawai->jenis_kelamin }}">
+                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
+                            <option>{{ $pegawai->jenis_kelamin }}</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Jabatan</label>
