@@ -7,7 +7,7 @@
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
-        </li><!-- End Dashboard Nav -->
+        </li>
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-menu-button-wide"></i><span>Data Master</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -24,13 +24,13 @@
                     </a>
                 </li>
             </ul>
-        </li><!-- End Components Nav -->
+        </li>
         <li class="nav-item">
             <a class="nav-link " href="{{ url('/datapegawai') }}">
                 <i class="bi bi-grid"></i>
                 <span>Data Pegawai</span>
             </a>
-        </li><!-- End Dashboard Nav -->
+        </li>
 
 
 

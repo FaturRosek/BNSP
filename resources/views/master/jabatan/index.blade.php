@@ -9,7 +9,7 @@
                 <li class="breadcrumb-item active">Jabatan</li>
             </ol>
         </nav>
-    </div><!-- End Page Title -->
+    </div>
 
     <div class="container-xxl" style="max-width: 1560px;">
         <div class="row justify-content-center">

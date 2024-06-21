@@ -12,7 +12,6 @@
 <body>
     <div class="form-container">
         <img src="landing/img/logo3.png" alt="Logo">
-        <!-- Alert content here -->
         @session('status')
             <div class="alert alert-primary" role="alert" style="color: blue">
                 {{ $value }}

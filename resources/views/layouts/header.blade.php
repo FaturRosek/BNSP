@@ -5,7 +5,7 @@
             <span>MM's Tailor</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
+    </div>
 
     <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
@@ -70,4 +70,4 @@
         </ul>
     </nav>
 
-</header><!-- End Header -->
+</header>
