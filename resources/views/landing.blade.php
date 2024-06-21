@@ -152,7 +152,7 @@
                         <div class="stats-item text-center">
                             <i class="bi bi-people"></i>
                             <span class="purecounter" data-purecounter-start="0" data-purecounter-end="15"
-                                data-purecounter-duration="0">15</span>
+                                data-purecounter-duration="0">{{ $totalpegawai }}</span>
                             <p>Pegawai</p>
                         </div><!-- End Stats Item -->
                     </div>
@@ -169,79 +169,30 @@
                 </div>
 
                 <div class="row">
-
-                    <div class="col-lg-6">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="landing/img/team/team-1.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <p>Explicabo voluptatem mollitia et repellat</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    @foreach ($pegawai as $p)
+                        @php
+                            $jabatanPegawai = $jabatan->firstWhere('id', $p->jabatan_id);
+                            $divisi = $divisi->firstWhere('id', $p->divisi_id);
+                        @endphp
+                        <div class="col-lg-6">
+                            <div class="member d-flex align-items-start">
+                                <div class="pic">
+                                    <img src="{{ asset($p->foto) }}" class="img-fluid">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $p->nama_pegawai }}</h4>
+                                    <span>{{ $jabatanPegawai->jabatan }}</span>
+                                    <p>{{ $divisi->divisi }}</p>
+                                    <div class="social">
+                                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                                        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-4 mt-lg-0">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="landing/img/team/team-2.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                                <p>Aut maiores voluptates amet et quis</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-4">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="landing/img/team/team-3.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <p>Quisquam facilis cum velit laborum corrupti</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-4">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="landing/img/team/team-4.jpg" class="img-fluid"
-                                    alt=""></div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <p>Dolorum tempora officiis odit laborum officiis</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
 
             </div>

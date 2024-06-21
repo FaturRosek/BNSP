@@ -13,13 +13,16 @@
     <div class="form-container">
         <img src="landing/img/logo3.png" alt="Logo">
         <h1>Login</h1>
-        <form>
+        <form action="{{ url('/proseslogin') }}" method="POST">
+            @csrf
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email address" required>
+                <input type="email" class="form-control" name="email" id="floatingInput" placeholder="Email address"
+                    required>
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password"
+                    required>
                 <label for="floatingPassword">Password</label>
             </div>
             <button type="submit" class="btn btn-primary mb-3">Sign in</button>

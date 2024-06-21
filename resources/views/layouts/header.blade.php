@@ -17,7 +17,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6></h6>
+                        <h6>{{ Auth::user()->name }}</h6>
                         <span>Web Designer</span>
                     </li>
                     <li>
@@ -55,13 +55,13 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href=""
+                        <a class="dropdown-item d-flex align-items-center" href="{{ url('/login') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sign Out</span>
                         </a>
 
-                        <form id="logout-form" action="" method="POST" style="display: none;">
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </li>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Master\DivisiController;
 use App\Http\Controllers\Master\JabatanController;
 use App\Http\Controllers\PegawaiController;
@@ -19,10 +20,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', [LandingController::class, 'index']);
 Route::resource('/login', LoginController::class);
+Route::post('/proseslogin', [LoginController::class, 'autentikasi']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::resource('/register', RegisterController::class);
 Route::resource('/dashboard', DashboardController::class);
 

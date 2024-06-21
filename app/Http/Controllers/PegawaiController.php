@@ -66,8 +66,8 @@ class PegawaiController extends Controller
     public function show($id)
     {
         $pegawai = Pegawai::findOrFail($id);
-        $jabatan = Jabatan::all();
-        $divisi = Divisi::all();
+        $jabatan = Jabatan::firstWhere('id', $pegawai->jabatan_id);
+        $divisi = Divisi::firstWhere('id', $pegawai->divisi_id);
         return view('pegawai.show', compact('jabatan', 'divisi', 'pegawai'));
     }
     public function destroy(string $id)
@@ -88,5 +88,38 @@ class PegawaiController extends Controller
         $jabatan = Jabatan::all();
         $divisi = Divisi::all();
         return view('pegawai.edit', compact('jabatan', 'divisi', 'pegawai'));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $pegawai = Pegawai::find($id);
+
+        $filename = $pegawai->foto;
+        $path = 'uploads/pas_foto/';
+
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move($path, $filename);
+
+            if (File::exists($pegawai->foto)) {
+                File::delete($pegawai->foto);
+            }
+        }
+
+        $pegawai->nama_pegawai = $request->nama;
+        $pegawai->NIK = $request->nik;
+        $pegawai->jenis_kelamin = $request->jenis_kelamin;
+        $pegawai->jabatan_id = $request->jabatan;
+        $pegawai->divisi_id = $request->divisi;
+        $pegawai->tgl_masuk = $request->tgl_masuk;
+        $pegawai->gaji = $request->gaji;
+        $pegawai->alamat = $request->alamat;
+        $pegawai->foto = $filename ? $path . $filename : $pegawai->foto;
+        $pegawai->save();
+
+        return redirect()->route('datapegawai.index')->with('status', 'Data Berhasil Diupdate');
     }
 }

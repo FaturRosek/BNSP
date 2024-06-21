@@ -23,17 +23,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Jabatan</label>
-                    @foreach ($jabatan as $j)
-                        <input type="text" name="jabatan" id="jabatan" class="form-control" value="{{ $j->jabatan }}"
-                            readonly>
-                    @endforeach
+                    <input type="text" name="jabatan" id="jabatan" class="form-control" value="{{ $jabatan->jabatan }}"
+                        readonly>
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Divisi</label>
-                    @foreach ($divisi as $d)
-                        <input type="text" name="" id="" class="form-control" value="{{ $d->divisi }}"
-                            readonly>
-                    @endforeach
+                    <input type="text" name="" id="" class="form-control" value="{{ $divisi->divisi }}"
+                        readonly>
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Tanggal Masuk</label>
@@ -50,8 +46,8 @@
                     <textarea name="alamat" id="alamat" class="form-control" readonly>{{ $pegawai->alamat }}</textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Pas Foto 3x4</label>
-                    <input type="file" name="foto" id="foto" class="form-control">
+                    <label for="" class="form-label">Pas Foto 3x4</label><br>
+                    <img src="{{ asset($pegawai->foto) }}" alt="gambar" style="max-width: 100px;">
                 </div>
                 <div class="mb-3">
                     <a href="{{ url('/datapegawai') }}" class="btn btn-secondary">Back</a>
