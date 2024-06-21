@@ -64,7 +64,7 @@
                         <textarea name="alamat" id="alamat" class="form-control">{{ $pegawai->alamat }}</textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Pas Foto 3x4</label><br>
+                        <label for="" class="form-label">Foto</label><br>
                         <img src="{{ asset($pegawai->foto) }}" alt="gambar" style="max-width: 100px;">
                         <input type="file" name="foto" id="foto" class="form-control">
                     </div>

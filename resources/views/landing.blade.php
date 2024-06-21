@@ -18,7 +18,6 @@
     <link href="landing/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="landing/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="landing/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="landing/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="landing/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
@@ -156,7 +155,6 @@
                                         <a href="#"><i class="ri-twitter-fill"></i></a>
                                         <a href="#"><i class="ri-facebook-fill"></i></a>
                                         <a href="#"><i class="ri-instagram-fill"></i></a>
-                                        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -181,26 +179,12 @@
         </section>
     </main>
 
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Sailor</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div>
-    </footer>
-
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
     <script src="landing/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="landing/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="landing/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="landing/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="landing/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="landing/vendor/php-email-form/validate.js"></script>
 
     <script src="landing/js/main.js"></script>
 

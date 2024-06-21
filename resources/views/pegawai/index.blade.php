@@ -14,20 +14,20 @@
     <div class="container-xxl" style="max-width: 1560px;">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                @session('status')
+                @if (session('status'))
                     <div class="alert alert-primary" role="alert">
-                        {{ $value }}
+                        {{ session('status') }}
                     </div>
-                @endsession
-                @session('status2')
+                @endif
+                @if (session('status2'))
                     <div class="alert alert-danger" role="alert">
-                        {{ $value }}
+                        {{ session('status2') }}
                     </div>
-                @endsession
+                @endif
                 <div class="d-flex justify-content-between mt-3">
                     <div class="search-box position-relative">
-                        <i class="fal fa-search fs-3 position-absolute top-50 translate-middle-y left-10"></i>
-                        <input type="text" data-table-id="goodsrecording-table" id="searchBox" data-action="search"
+                        <i class="bi bi-search position-absolute top-50 translate-middle-y" style="left: 10px;"></i>
+                        <input type="text" table-id="pegawai-table" id="searchBox" data-action="search"
                             class="form-control form-control-solid ps-5" placeholder="Search Pegawai" />
                     </div>
                     <a href="{{ route('datapegawai.create') }}" class="btn btn-primary">+ Tambah Data</a>
@@ -38,7 +38,7 @@
         <div class="row mt-5">
             <div class="col-md-12">
                 <div class="table-responsive">
-                    <table class="table align-middle table-striped table-hover">
+                    <table class="table align-middle table-striped table-hover" id="pegawai-table">
                         <thead class="text-start text-muted fw-bold text-uppercase">
                             <tr class="text-center align-middle">
                                 <th>No</th>
@@ -90,4 +90,26 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBox = document.getElementById('searchBox');
+            const table = document.getElementById('pegawai-table').getElementsByTagName('tbody')[0];
+            searchBox.addEventListener('input', function() {
+                const searchTerm = searchBox.value.toLowerCase();
+                const rows = table.getElementsByTagName('tr');
+                for (let i = 0; i < rows.length; i++) {
+                    const cells = rows[i].getElementsByTagName('td');
+                    let rowContainsSearchTerm = false;
+                    for (let j = 0; j < cells.length; j++) {
+                        if (cells[j].textContent.toLowerCase().includes(searchTerm)) {
+                            rowContainsSearchTerm = true;
+                            break;
+                        }
+                    }
+                    rows[i].style.display = rowContainsSearchTerm ? '' : 'none';
+                }
+            });
+        });
+    </script>
 @endsection

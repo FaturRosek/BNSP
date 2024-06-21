@@ -15,11 +15,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">NIK</label>
-                        <input type="text" name="nik" id="nik" class="form-control">
+                        <input type="text" name="nik" id="nik" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Jenis Kelamin</label>
-                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
+                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-select" required>
                             <option selected disabled>Jenis Kelamin</option>
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
@@ -27,7 +27,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Jabatan</label>
-                        <select id="jabatan" name="jabatan" class="form-select" aria-label="Default select example">
+                        <select id="jabatan" name="jabatan" class="form-select" aria-label="Default select example"
+                            required>
                             <option selected disabled>Jabatan</option>
                             @foreach ($jabatan as $j)
                                 <option value="{{ $j->id }}">{{ $j->jabatan }}</option>
@@ -36,7 +37,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Divisi</label>
-                        <select name="divisi" id="divisi" class="form-select">
+                        <select name="divisi" id="divisi" class="form-select" required>
                             <option selected disabled>Divisi</option>
                             @foreach ($divisi as $d)
                                 <option value="{{ $d->id }}">{{ $d->divisi }}</option>
@@ -45,19 +46,19 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Tanggal Masuk</label>
-                        <input type="date" name="tgl_masuk" id="tgl_masuk" class="form-control">
+                        <input type="date" name="tgl_masuk" id="tgl_masuk" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Gaji</label>
-                        <input type="number" name="gaji" id="gaji" class="form-control">
+                        <input type="number" name="gaji" id="gaji" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Alamat</label>
-                        <textarea name="alamat" id="alamat" class="form-control"></textarea>
+                        <textarea name="alamat" id="alamat" class="form-control" required></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Pas Foto 3x4</label>
-                        <input type="file" name="foto" id="foto" class="form-control">
+                        <label for="" class="form-label">Foto</label>
+                        <input type="file" name="foto" id="foto" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Simpan</button>
