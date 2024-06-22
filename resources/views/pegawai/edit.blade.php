@@ -20,11 +20,12 @@
                             value="{{ $pegawai->NIK }}">
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Jenis Kelamin</label>
+                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
-                            <option>{{ $pegawai->jenis_kelamin }}</option>
-                            <option value="Laki-Laki">Laki-Laki</option>
-                            <option value="Perempuan">Perempuan</option>
+                            <option value="Laki-Laki" {{ $pegawai->jenis_kelamin == 'Laki-Laki' ? 'selected' : '' }}>
+                                Laki-Laki</option>
+                            <option value="Perempuan" {{ $pegawai->jenis_kelamin == 'Perempuan' ? 'selected' : '' }}>
+                                Perempuan</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -64,10 +65,13 @@
                         <textarea name="alamat" id="alamat" class="form-control">{{ $pegawai->alamat }}</textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Foto</label><br>
-                        <img src="{{ asset($pegawai->foto) }}" alt="gambar" style="max-width: 100px;">
-                        <input type="file" name="foto" id="foto" class="form-control">
+                        <label for="foto" class="form-label">Foto</label><br>
+                        @if ($pegawai->foto)
+                            <img src="{{ asset($pegawai->foto) }}" alt="gambar" style="max-width: 100px;"><br>
+                        @endif
+                        <input type="file" name="foto" id="foto" class="form-control mt-2">
                     </div>
+
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Update</button>
                         <a href="{{ url('/datapegawai') }}" class="btn btn-secondary">Back</a>

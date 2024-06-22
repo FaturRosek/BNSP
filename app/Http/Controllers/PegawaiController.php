@@ -29,7 +29,7 @@ class PegawaiController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255|string',
-            'nik' => 'required|max:255|string',
+            'nik' => 'required|max:18|string',
             'jenis_kelamin' => 'required|string',
             'jabatan' => 'required|exists:jabatans,id',
             'divisi' => 'nullable|exists:divisis,id',

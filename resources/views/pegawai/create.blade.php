@@ -10,12 +10,13 @@
                     @csrf
                     <div class="mb-3">
                         <label class="form-label" required>Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Enter name"
-                            required>
+                        <input type="text" class="form-control" id="nama" name="nama"
+                            placeholder="Masukkan Nama Lengkap" required>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">NIK</label>
-                        <input type="text" name="nik" id="nik" class="form-control" required>
+                        <input type="text" name="nik" id="nik" class="form-control" placeholder="Masukkkan NIK"
+                            required>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Jenis Kelamin</label>
@@ -50,19 +51,22 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Gaji</label>
-                        <input type="number" name="gaji" id="gaji" class="form-control" required>
+                        <input type="number" name="gaji" id="gaji" class="form-control"
+                            placeholder="Masukkan Jumlah Gaji" required>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Alamat</label>
-                        <textarea name="alamat" id="alamat" class="form-control" required></textarea>
+                        <textarea name="alamat" id="alamat" class="form-control" placeholder="Masukkan Alamat" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Foto</label>
                         <input type="file" name="foto" id="foto" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                        <a href="{{ url('/datapegawai') }}" class="btn btn-secondary">Back</a>
+                        <div class="d-flex justify-content-end">
+                            <a href="{{ url('/datapegawai') }}" class="btn btn-secondary me-1">Back</a>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
                     </div>
                 </form>
             </div>

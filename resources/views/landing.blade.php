@@ -9,7 +9,6 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <link href="landing/img/logo3.png" rel="icon">
-    <link href="landing/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
@@ -57,7 +56,7 @@
             <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active" style="background-image: url(landing/img/slide/slide-1.jpg)">
+                <div class="carousel-item active" style="background-image: url(landing/img/slide/hero.jpg)">
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM Tailor</span></h2>
@@ -67,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url(landing/img/slide/slide-2.jpg)">
+                <div class="carousel-item" style="background-image: url(landing/img/slide/hero2.jpg)">
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM Tailor</span></h2>
@@ -77,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url(landing/img/slide/slide-3.jpg)">
+                <div class="carousel-item" style="background-image: url(landing/img/slide/hero3.jpg)">
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>MM Tailor</span></h2>
