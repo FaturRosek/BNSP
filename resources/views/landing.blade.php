@@ -23,11 +23,6 @@
     <link href="landing/css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        #map {
-            height: 400px;
-        }
-    </style>
 </head>
 
 <body>
@@ -162,20 +157,6 @@
                 </div>
             </div>
         </section>
-
-        <section id="lokasi" class="contact">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Lokasi</h2>
-                    <p>Temukan Lokasi kami</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div id="map"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -186,23 +167,6 @@
     <script src="landing/vendor/waypoints/noframework.waypoints.js"></script>
 
     <script src="landing/js/main.js"></script>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        var map = L.map('map').setView([-6.9482, 112.8349], 13);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([-6.9482, 112.8349]).addTo(map)
-            .bindPopup('MM`s Tailor')
-        .bindTooltip('MM`s Tailor', {
-                permanent: true,
-                direction: 'top'
-            });
-    </script>
-
 </body>
 
 </html>

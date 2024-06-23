@@ -28,7 +28,7 @@ class PegawaiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required|max:255|string',
+            'nama' => 'required|min:3|max:255|string',
             'nik' => 'required|max:18|string',
             'jenis_kelamin' => 'required|string',
             'jabatan' => 'required|exists:jabatans,id',
