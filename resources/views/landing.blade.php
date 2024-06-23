@@ -22,7 +22,6 @@
 
     <link href="landing/css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
