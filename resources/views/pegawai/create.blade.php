@@ -23,7 +23,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="jenis_kelamin">Jenis Kelamin</label>
                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
-                            <option selected disabled>Jenis Kelamin</option>
+                            <option selected disabled>Pilih Jenis Kelamin</option>
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>
@@ -32,7 +32,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="jabatan">Jabatan</label>
                         <select id="jabatan" name="jabatan" class="form-select" aria-label="Default select example">
-                            <option selected disabled>Jabatan</option>
+                            <option selected disabled>Pilih Jabatan</option>
                             @foreach ($jabatan as $j)
                                 <option value="{{ $j->id }}">{{ $j->jabatan }}</option>
                             @endforeach
@@ -42,7 +42,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="divisi">Divisi</label>
                         <select name="divisi" id="divisi" class="form-select">
-                            <option selected disabled>Divisi</option>
+                            <option selected disabled>Pilih Divisi</option>
                             @foreach ($divisi as $d)
                                 <option value="{{ $d->id }}">{{ $d->divisi }}</option>
                             @endforeach

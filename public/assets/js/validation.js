@@ -25,17 +25,17 @@ function validateForm() {
         return false;
     }
 
-    if (jenis_kelamin.value === "") {
+    if (jenis_kelamin.value === "" || jenis_kelamin.value === null) {
         setInvalidField(jenis_kelamin, "Jenis Kelamin harus dipilih");
         return false;
     }
 
-    if (jabatan.value === "") {
+    if (jabatan.value === "" || jabatan.value === null) {
         setInvalidField(jabatan, "Jabatan harus dipilih");
         return false;
     }
 
-    if (divisi.value === "") {
+    if (divisi.value === "" || divisi.value === null) {
         setInvalidField(divisi, "Divisi harus dipilih");
         return false;
     }
@@ -71,9 +71,12 @@ function setInvalidField(field, message) {
     field.nextElementSibling.textContent = message;
 }
 
-document.querySelectorAll(".form-control").forEach(function (element) {
-    element.addEventListener("input", function () {
-        this.classList.remove("is-invalid");
-        this.nextElementSibling.textContent = "";
+// Event listener untuk menghapus class is-invalid saat input diubah
+document
+    .querySelectorAll(".form-control, .form-select")
+    .forEach(function (element) {
+        element.addEventListener("input", function () {
+            this.classList.remove("is-invalid");
+            this.nextElementSibling.textContent = "";
+        });
     });
-});
