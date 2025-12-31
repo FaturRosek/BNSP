@@ -43,29 +43,29 @@
     <script src="../../assets/vendor/simple-datatables/simple-datatables.js"></script>
     <script src="../../assets/vendor/tinymce/tinymce.min.js"></script>
     <script src="../../assets/vendor/php-email-form/validate.js"></script>
-
     <script src="../../assets/js/main.js"></script>
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    
+    <!-- OneSignal SDK -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"></script>
     <script>
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(async function(OneSignal) {
-        await OneSignal.init({
-            appId: "7f1be0b2-4460-4061-9534-5e3d9f023304",
-            safari_web_id: "web.onesignal.auto.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // Jika ada
-            notifyButton: {
-                enable: true,
-            },
-            allowLocalhostAsSecureOrigin: false,
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function(OneSignal) {
+            try {
+                await OneSignal.init({
+                    appId: "7f1be0b2-4460-4061-9534-5e3d9f023304",
+                    allowLocalhostAsSecureOrigin: false,
+                });
+                
+                console.log('✅ OneSignal berhasil diinisialisasi!');
+                
+                // Tampilkan prompt notifikasi
+                OneSignal.Slidedown.promptPush();
+                
+            } catch (error) {
+                console.error('❌ Error OneSignal:', error);
+            }
         });
-        
-        // Debug: Cek apakah OneSignal sudah terload
-        console.log('OneSignal initialized');
-        
-        // Minta permission
-        OneSignal.Slidedown.promptPush();
-    });
     </script>
-
 
 </body>
 
