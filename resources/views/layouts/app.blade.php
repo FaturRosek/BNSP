@@ -50,8 +50,19 @@
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     OneSignalDeferred.push(async function(OneSignal) {
         await OneSignal.init({
-        appId: "7f1be0b2-4460-4061-9534-5e3d9f023304",
+            appId: "7f1be0b2-4460-4061-9534-5e3d9f023304",
+            safari_web_id: "web.onesignal.auto.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", // Jika ada
+            notifyButton: {
+                enable: true,
+            },
+            allowLocalhostAsSecureOrigin: false,
         });
+        
+        // Debug: Cek apakah OneSignal sudah terload
+        console.log('OneSignal initialized');
+        
+        // Minta permission
+        OneSignal.Slidedown.promptPush();
     });
     </script>
 
