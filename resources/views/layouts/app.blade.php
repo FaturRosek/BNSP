@@ -45,6 +45,15 @@
     <script src="../../assets/vendor/php-email-form/validate.js"></script>
 
     <script src="../../assets/js/main.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+        appId: "7f1be0b2-4460-4061-9534-5e3d9f023304",
+        });
+    });
+    </script>
 
 
 </body>
